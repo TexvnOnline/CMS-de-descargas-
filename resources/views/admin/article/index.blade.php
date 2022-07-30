@@ -32,7 +32,7 @@
 		  <tbody>
 			  @foreach ($articles as $article)
 				<tr>
-					<th scope="row">{{$article->id}}</td>
+					<th scope="row">{{$article->id}}</th>
 					<td>{{$article->name}}</td>
 
 					<td>

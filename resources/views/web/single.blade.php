@@ -122,7 +122,8 @@
 				</div>
 
 				{{--  PUBLICIDAD  --}}
-				<div class="latestnew">
+				@include('web._latestnew')
+				{{--  <div class="latestnew">
 					<div class="container">
 						<div class="row ipad-width">
 							<div class="col-md-8">
@@ -134,7 +135,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div>  --}}
 
 
 			</div>
@@ -154,11 +155,7 @@
 							@endforeach
 						</ul>
 					</div>
-					<div class="ads">
-						<a href="{{$cover2->urlpublicidad}}">
-							<img src="{!!asset($cover2->imagepublicidad)!!}" alt="">
-						</a> 
-					</div>
+					@include('web._ads')
 					<div class="sb-tags sb-it">
 						<h4 class="sb-title">tags</h4>
 						<ul class="tag-items">

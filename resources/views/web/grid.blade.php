@@ -67,15 +67,17 @@
                         <div class="movie-item-style-2 movie-item-style-1">
                             <img src="{!!asset($article->image)!!}" alt="">
                             <div class="hvr-inner">
-                                <a  href="{{route('web.single',$article->slug)}}"> Ir a descarga <i class="ion-android-arrow-dropright"></i> </a>
+                                <a href="{{route('web.single',$article->slug)}}"> Ir a descarga <i
+                                        class="ion-android-arrow-dropright"></i> </a>
                             </div>
                             <div class="mv-item-infor">
                                 <h6><a href="{{route('web.single',$article->slug)}}">{{$article->name}}</a></h6>
-                                <p class="rate"><i class="ion-android-download"></i><span>{{$article->visits}}</span></p>
+                                <p class="rate"><i class="ion-android-download"></i><span>{{$article->visits}}</span>
+                                </p>
                             </div>
-                        </div>	
+                        </div>
                         @endforeach
-                    </div>		
+                    </div>
                     <div class="pagination">
                         {{$articles->render()}}
                     </div>
@@ -85,32 +87,17 @@
                         @include('web.template.searh')
                         @include('web.template.categories')
                         @include('web.template.tags')
-                        <div class="ads">
-                            <a href="{{$cover2->urlpublicidad}}">
-                                <img src="{!!asset($cover2->imagepublicidad)!!}" alt="">
-                            </a> 
-                        </div>
+                        @include('web._ads')
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="latestnew">
-        <div class="container">
-            <div class="row ipad-width">
-                <div class="col-md-8">
-                    <div class="ads">
-                        <a href="{{$cover->urlpublicidad}}">
-                            <img src="{!!asset($cover->imagepublicidad)!!}" alt="" width="728" height="106">
-                        </a>  
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('web._latestnew')
+    
 
-            </div>
+</div>
 
-            
+
 @endsection

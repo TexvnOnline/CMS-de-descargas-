@@ -27,7 +27,7 @@
 		  <tbody>
 			  @foreach ($roles as $role)
 			<tr>
-				  <th scope="row">{{$role->id}}</td>
+				  <th scope="row">{{$role->id}}</th>
 				  <td>{{$role->name}}</td>
 			  	<td width="10px">
 				  <a class="btn btn-default" href="{{route('roles.show', $role->id)}}">Ver</a>

@@ -123,10 +123,10 @@ class WebController extends Controller
     }
     public function index(){
         $donation = Donation::whereId(1)->first();
-       
+        
         $cover = Cover::whereId(1)->first();
         $cover2 = Cover::whereId(2)->first();
-
+        
         $socials = Social::orderBy('id','DESC')->get();
         
         $categories = Category::where('cover', 1)->with('subcategories')->get();
